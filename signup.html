@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Search Bar | Tailwind CSS</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body class="bg-gray-200">
+    <nav class="bg-white shadow-lg w-full fixed">
+      <div class="max-w-7xl mx-auto px-4">
+        <div class="flex justify-between items-center py-4">
+          <div class="text-2xl font-bold text-blue-500">MyLogoHere</div>
+          <!-- Desktop Menu -->
+          <div class="hidden md:flex space-x-6">
+            <a href="#" class="text-gray-700 hover:text-blue-500">Home</a>
+            <a href="#" class="text-gray-700 hover:text-blue-500">About</a>
+            <a href="#" class="text-gray-700 hover:text-blue-500">Services</a>
+            <div class="relative group">
+              <button
+                class="text-gray-700 hover:text-blue-500 flex items-center"
+              >
+                More ▼
+              </button>
+              <div
+                class="hidden group-hover:block rounded-md mt-2 w-40 absolute bg-white shadow-lg"
+              >
+                <a href="#" class="block px-4 py-2 hover:bg-blue-500"
+                  >Contact</a
+                >
+                <a href="#" class="block px-4 py-2 hover:bg-blue-500">Help</a>
+              </div>
+            </div>
+            <a href="#" class="text-gray-700 hover:text-blue-500">Blog</a>
+          </div>
+
+          <!-- Mobile Menu Button-->
+          <button id="menu-btn" class="md:hidden text-gray-700 text-xl">
+            ☰
+          </button>
+        </div>
+      </div>
+
+      <!-- Mobile Menu  -->
+      <div id="mobile-menu" class="hidden md:hidden">
+        <a href="#" class="block px-4 py-2 text-gray-700 hover:text-blue-600"
+          >Home</a
+        >
+        <a href="#" class="block px-4 py-2 text-gray-700 hover:text-blue-600"
+          >About</a
+        >
+        <a href="#" class="block px-4 py-2 text-gray-700 hover:text-blue-600"
+          >Services</a
+        >
+        <a href="#" class="block px-4 py-2 text-gray-700 hover:text-blue-600"
+          >Contact</a
+        >
+        <a href="#" class="block px-4 py-2 text-gray-700 hover:text-blue-600"
+          >Blog</a
+        >
+      </div>
+    </nav>
+    <script>
+      document
+        .getElementById("menu-btn")
+        .addEventListener("click", function () {
+          document.getElementById("mobile-menu").classList.toggle("hidden");
+        });
+    </script>
+  </body>
+</html>
